@@ -1,12 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Mi Compilador</title>
+  <meta charset="UTF-8">
+  <title>Compilador - Proyecto</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HOLA</h1>
+
+<header>
+  <h1>Nombre del Compilador</h1>
+  <p>Portafolio del Proyecto</p>
+</header>
+
+<nav>
+  <a href="#introduccion">Introducción</a>
+  <a href="#lenguaje">Lenguaje</a>
+  <a href="#lexico">Léxico</a>
+  <a href="#sintactico">Sintáctico</a>
+  <a href="#semantico">Semántico</a>
+  <a href="#tabla">Tabla de Símbolos</a>
+  <a href="#codigo">Código</a>
+  <a href="#demo">Demo</a>
+  <a href="#repo">Repositorio</a>
+</nav>
+
+<div class="container">
+
+  <!-- PORTADA -->
+  <section>
+    <h2>Portada</h2>
+    <p><strong>Integrantes:</strong> Nombre 1, Nombre 2</p>
+    <p><strong>Curso:</strong> Compiladores</p>
+    <p><strong>Docente:</strong> Nombre del docente</p>
+    <p><strong>Fecha:</strong> 2026</p>
+  </section>
+
+  <!-- INTRODUCCIÓN -->
+  <section id="introduccion">
+    <h2>Introducción</h2>
+    <p>
+      Explica qué es tu compilador y cuál es su propósito.
+    </p>
+  </section>
+
+  <!-- LENGUAJE -->
+  <section id="lenguaje">
+    <h2>Descripción del Lenguaje</h2>
+    <p>Tipo de lenguaje:</p>
+    <p>Instrucciones principales:</p>
+    <p>Estructura de un programa:</p>
+  </section>
+
+  <!-- LÉXICO -->
+  <section id="lexico">
+    <h2>Fase 1: Analizador Léxico</h2>
+    <p>Cómo identifica tokens:</p>
+
+    <ul>
+      <li>Palabras reservadas:</li>
+      <li>Identificadores:</li>
+      <li>Operadores:</li>
+      <li>Números:</li>
+      <li>Símbolos:</li>
+      <li>Errores léxicos:</li>
+    </ul>
+
+    <p><strong>Ejemplo de entrada:</strong></p>
+    <pre>
+x = 10 + 5;
+    </pre>
+
+    <p><strong>Tokens generados:</strong></p>
+    <pre>
+IDENTIFIER(x), EQUAL, NUMBER(10), PLUS, NUMBER(5)
+    </pre>
+  </section>
+
+  <!-- SINTÁCTICO -->
+  <section id="sintactico">
+    <h2>Fase 2: Analizador Sintáctico</h2>
+    <p>Explica la gramática:</p>
+
+    <pre>
+E → E + T | T
+T → número | identificador
+    </pre>
+
+    <p><strong>Ejemplo válido:</strong></p>
+    <pre>
+x = 5 + 3;
+    </pre>
+
+    <p><strong>Ejemplo inválido:</strong></p>
+    <pre>
+x = + 5;
+    </pre>
+
+    <p>Árbol sintáctico (puedes poner imagen):</p>
+  </section>
+
+  <!-- SEMÁNTICO -->
+  <section id="semantico">
+    <h2>Fase 3: Analizador Semántico</h2>
+    <p>Validaciones:</p>
+
+    <ul>
+      <li>Variables declaradas</li>
+      <li>Tipos compatibles</li>
+      <li>Errores semánticos</li>
+    </ul>
+  </section>
+
+  <!-- TABLA DE SÍMBOLOS -->
+  <section id="tabla">
+    <h2>Fase 4: Tabla de Símbolos</h2>
+    <p>Información almacenada:</p>
+
+    <ul>
+      <li>Nombre</li>
+      <li>Tipo</li>
+      <li>Valor</li>
+      <li>Ámbito</li>
+      <li>Línea</li>
+    </ul>
+  </section>
+
+  <!-- GENERACIÓN DE CÓDIGO -->
+  <section id="codigo">
+    <h2>Fase 5: Generación de Código</h2>
+    <p>Salida del compilador:</p>
+
+    <pre>
+PRINT 15
+    </pre>
+  </section>
+
+  <!-- DEMO -->
+  <section id="demo">
+    <h2>Demostración</h2>
+    <p>Puedes agregar:</p>
+    <ul>
+      <li>Capturas</li>
+      <li>GIF</li>
+      <li>Video</li>
+    </ul>
+  </section>
+
+  <!-- REPOSITORIO -->
+  <section id="repo">
+    <h2>Repositorio</h2>
+    <p>
+      Enlace al proyecto:
+      <a href="#">https://github.com/tu-repo</a>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 Proyecto de Compiladores</p>
+</footer>
+
 </body>
 </html>
