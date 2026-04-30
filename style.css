@@ -9,7 +9,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #0e3eff;
+  background-color: #ffffff;
   color: #333;
 }
 
@@ -39,7 +39,7 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   margin: 0 10px;
 }
