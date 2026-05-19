@@ -1,11 +1,7 @@
 import sys
 import os
 
-# Apunta a la raíz del proyecto para poder importar compiler/
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', '..'))
-COMPILER = os.path.join(ROOT, 'compiler')
-
-sys.path.insert(0, ROOT)
+COMPILER = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'compiler'))
 sys.path.insert(0, COMPILER)
 
 from models.lexico_model import Lexer
