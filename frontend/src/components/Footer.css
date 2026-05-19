@@ -1,0 +1,42 @@
+.footer {
+  background: var(--primary);
+  border-top: 2px solid var(--gold);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.footer-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-divider {
+  color: var(--gold);
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  font-family: var(--font-title);
+  color: var(--gold-lt);
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.footer-sub {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+
+.footer-link {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--gold-lt);
+}

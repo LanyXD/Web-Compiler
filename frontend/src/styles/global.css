@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Share+Tech+Mono&display=swap');
+
+/* ── VARIABLES ─────────────────────────────────────────────────────────────── */
+:root {
+  --bg:         #F5E6CC;
+  --surface:    #FFF8E7;
+  --primary:    #1F3A5F;
+  --accent:     #2C5AA0;
+  --accent-lt:  #D6E4FF;
+  --pressed:    #16304A;
+  --text:       #1F3A5F;
+  --text-muted: #5a7a9a;
+  --border:     #1F3A5F;
+  --gold:       #C8963E;
+  --gold-lt:    #F0D080;
+
+  --font-title: 'Cinzel', serif;
+  --font-body:  'IM Fell English', serif;
+  --font-mono:  'Share Tech Mono', monospace;
+
+  --radius:     8px;
+  --radius-lg:  12px;
+  --shadow:     0 2px 12px rgba(31, 58, 95, 0.15);
+  --shadow-lg:  0 4px 24px rgba(31, 58, 95, 0.2);
+}
+
+/* ── RESET ──────────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.75;
+  min-height: 100vh;
+
+  /* textura sutil de pergamino */
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 150, 62, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(31, 58, 95, 0.04) 0%, transparent 50%);
+}
+
+/* ── TIPOGRAFÍA ─────────────────────────────────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(1.8rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
+h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+
+p {
+  font-family: var(--font-body);
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--pressed);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* ── LAYOUT ─────────────────────────────────────────────────────────────────── */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.page {
+  min-height: 100vh;
+  padding-top: 72px; /* altura del navbar */
+}
+
+/* ── SECCIONES ──────────────────────────────────────────────────────────────── */
+.section {
+  padding: 64px 0;
+  border-bottom: 1px solid rgba(31, 58, 95, 0.15);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  color: var(--primary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--gold), transparent);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+/* ── CARDS ──────────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid rgba(31, 58, 95, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+/* ── BOTONES ─────────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.btn:active {
+  background: var(--pressed);
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background: var(--accent-lt);
+  color: var(--primary);
+}
+
+/* ── CODE BLOCK ─────────────────────────────────────────────────────────────── */
+.code-block {
+  background: var(--primary);
+  color: var(--gold-lt);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* ── BADGE ──────────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary {
+  background: var(--accent-lt);
+  color: var(--primary);
+}
+
+.badge-gold {
+  background: rgba(200, 150, 62, 0.15);
+  color: var(--gold);
+  border: 1px solid rgba(200, 150, 62, 0.3);
+}
+
+/* ── DIVIDER ─────────────────────────────────────────────────────────────────── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0;
+  color: var(--gold);
+  font-family: var(--font-title);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+/* ── TABLA ──────────────────────────────────────────────────────────────────── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
+
+.data-table th {
+  background: var(--primary);
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+  font-family: var(--font-title);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.data-table td {
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(31, 58, 95, 0.1);
+  color: var(--text);
+}
+
+.data-table tr:hover td {
+  background: rgba(214, 228, 255, 0.3);
+}
+
+/* ── SCROLLBAR ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
