@@ -15,7 +15,10 @@ export default function Home() {
         <div className="home-meta">
           <div className="meta-item">
             <span className="meta-label">Integrantes</span>
-            <span className="meta-value">Ricardo Arturo Feliz Alva · Andy Isaac Monzón López</span>
+            <span className="meta-value">
+              Ricardo Arturo Feliz Alva - 1525123 <br />
+              Andy Isaac Monzón López - 1530522
+              </span>
           </div>
           <div className="meta-item">
             <span className="meta-label">Docente</span>
