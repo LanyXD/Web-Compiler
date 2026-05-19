@@ -1,0 +1,141 @@
+/* FIELDS */
+.sym-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.sym-field-row {
+  display: grid;
+  grid-template-columns: 110px 70px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 10px 16px;
+  background: var(--surface);
+  border: 1px solid rgba(31, 58, 95, 0.12);
+  border-radius: var(--radius);
+}
+
+.sym-field-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.sym-field-type {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.sym-field-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin: 0 !important;
+}
+
+@media (max-width: 600px) {
+  .sym-field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SPLIT */
+.sym-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+@media (max-width: 700px) {
+  .sym-split { grid-template-columns: 1fr; }
+}
+
+.sym-label {
+  font-family: var(--font-title);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px !important;
+}
+
+.sym-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid rgba(31, 58, 95, 0.15);
+}
+
+/* SCOPE PILLS */
+.sym-scope-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.sym-scope-pill.global {
+  background: rgba(31, 58, 95, 0.1);
+  color: var(--primary);
+}
+
+.sym-scope-pill.local {
+  background: rgba(200, 150, 62, 0.12);
+  color: var(--gold);
+}
+
+/* TYPE BADGE */
+.sym-type-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(31, 58, 95, 0.06);
+  color: var(--text-muted);
+}
+
+.sym-type-badge.func {
+  background: rgba(124, 58, 237, 0.1);
+  color: #6d28d9;
+}
+
+/* BUILTINS */
+.sym-builtins {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sym-builtin-card {
+  background: var(--surface);
+  border: 1px solid rgba(31, 58, 95, 0.12);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.sym-builtin-sig {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.sym-builtin-desc {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 0 !important;
+}
